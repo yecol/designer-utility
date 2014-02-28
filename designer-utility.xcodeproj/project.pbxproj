@@ -21,6 +21,11 @@
 		2786426818C0A9B00007C586 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2786424A18C0A9AF0007C586 /* UIKit.framework */; };
 		2786427018C0A9B00007C586 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2786426E18C0A9B00007C586 /* InfoPlist.strings */; };
 		2786427218C0A9B00007C586 /* designer_utilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2786427118C0A9B00007C586 /* designer_utilityTests.m */; };
+		27CA055418C0BD8900E70FE9 /* YSPortfolioIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CA055318C0BD8900E70FE9 /* YSPortfolioIndexViewController.m */; };
+		27CA055A18C0CCD300E70FE9 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CA055918C0CCD300E70FE9 /* test.png */; };
+		27CA055F18C0D5D800E70FE9 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CA055C18C0D5D800E70FE9 /* avatar.png */; };
+		27CA056018C0D5D800E70FE9 /* avatar_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CA055D18C0D5D800E70FE9 /* avatar_down.png */; };
+		27CA056118C0D5D800E70FE9 /* avatar_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CA055E18C0D5D800E70FE9 /* avatar_up.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,12 @@
 		2786426D18C0A9B00007C586 /* designer-utilityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "designer-utilityTests-Info.plist"; sourceTree = "<group>"; };
 		2786426F18C0A9B00007C586 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2786427118C0A9B00007C586 /* designer_utilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = designer_utilityTests.m; sourceTree = "<group>"; };
+		27CA055218C0BD8900E70FE9 /* YSPortfolioIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPortfolioIndexViewController.h; sourceTree = "<group>"; };
+		27CA055318C0BD8900E70FE9 /* YSPortfolioIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPortfolioIndexViewController.m; sourceTree = "<group>"; };
+		27CA055918C0CCD300E70FE9 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		27CA055C18C0D5D800E70FE9 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		27CA055D18C0D5D800E70FE9 /* avatar_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_down.png; sourceTree = "<group>"; };
+		27CA055E18C0D5D800E70FE9 /* avatar_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_up.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +93,7 @@
 		2786423A18C0A9AF0007C586 = {
 			isa = PBXGroup;
 			children = (
+				27CA055918C0CCD300E70FE9 /* test.png */,
 				2786424C18C0A9AF0007C586 /* designer-utility */,
 				2786426B18C0A9B00007C586 /* designer-utilityTests */,
 				2786424518C0A9AF0007C586 /* Frameworks */,
@@ -117,7 +129,10 @@
 				2786425818C0A9AF0007C586 /* Main.storyboard */,
 				2786425B18C0A9AF0007C586 /* YSViewController.h */,
 				2786425C18C0A9AF0007C586 /* YSViewController.m */,
+				27CA055218C0BD8900E70FE9 /* YSPortfolioIndexViewController.h */,
+				27CA055318C0BD8900E70FE9 /* YSPortfolioIndexViewController.m */,
 				2786425E18C0A9AF0007C586 /* Images.xcassets */,
+				27CA055B18C0D5D800E70FE9 /* Images */,
 				2786424D18C0A9AF0007C586 /* Supporting Files */,
 			);
 			path = "designer-utility";
@@ -150,6 +165,16 @@
 				2786426E18C0A9B00007C586 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27CA055B18C0D5D800E70FE9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				27CA055C18C0D5D800E70FE9 /* avatar.png */,
+				27CA055D18C0D5D800E70FE9 /* avatar_down.png */,
+				27CA055E18C0D5D800E70FE9 /* avatar_up.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +255,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2786425F18C0A9AF0007C586 /* Images.xcassets in Resources */,
+				27CA055F18C0D5D800E70FE9 /* avatar.png in Resources */,
+				27CA056118C0D5D800E70FE9 /* avatar_up.png in Resources */,
 				2786425118C0A9AF0007C586 /* InfoPlist.strings in Resources */,
 				2786425A18C0A9AF0007C586 /* Main.storyboard in Resources */,
+				27CA056018C0D5D800E70FE9 /* avatar_down.png in Resources */,
+				27CA055A18C0CCD300E70FE9 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CA055418C0BD8900E70FE9 /* YSPortfolioIndexViewController.m in Sources */,
 				2786425D18C0A9AF0007C586 /* YSViewController.m in Sources */,
 				2786425718C0A9AF0007C586 /* YSAppDelegate.m in Sources */,
 				2786425318C0A9AF0007C586 /* main.m in Sources */,
@@ -463,6 +493,7 @@
 				2786427718C0A9B00007C586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2786427818C0A9B00007C586 /* Build configuration list for PBXNativeTarget "designer-utilityTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +502,7 @@
 				2786427A18C0A9B00007C586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
