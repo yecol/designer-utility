@@ -8,6 +8,8 @@
 
 #import "YSViewController.h"
 
+const int verticalPortfolio = 4;
+
 @interface YSViewController (){
     
     BOOL isPortfolioOpen;
@@ -26,9 +28,6 @@
     isPortfolioOpen = FALSE;
     
     [self.view bringSubviewToFront:self.portfolioBtn];
-    
-    [self.hPflView setScrollEnabled:YES];
-    [self.hPflView setContentSize:CGSizeMake(2000, 700)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,9 +47,7 @@
         oViewFrame = self.portfolioIndexView.frame;
         oBtnFrame = self.portfolioBtn.frame;
         
-        NSLog(@"oBtnFramex=%f,y=%f,w=%f,h=%f",oBtnFrame.origin.x,oBtnFrame.origin.y,oBtnFrame.size.width,oBtnFrame.size.height);
-        
-        [UIView animateWithDuration:0.5
+        [UIView animateWithDuration:2
                               delay:0.1
                             options: UIViewAnimationOptionCurveEaseInOut
                          animations:^
@@ -69,10 +66,15 @@
          {
              [self.portfolioBtn setImage:[UIImage imageNamed:@"avatar_down"] forState:UIControlStateHighlighted];
              isPortfolioOpen = TRUE;
+             
+             [self.hPflView setContentSize:CGSizeMake(1131, 700)];
+             
+             [self.v3PflView setContentSize:CGSizeMake(267, 1026)];
+             [self.v4PflView setContentSize:CGSizeMake(267, 912)];
          }];
         
     }else{
-        [UIView animateWithDuration:0.5
+        [UIView animateWithDuration:2
                               delay:0.1
                             options: UIViewAnimationOptionCurveEaseInOut
                          animations:^
@@ -90,17 +92,6 @@
     }
     
 
-}
-
--(void)beginIndexPageAnimation{
-    NSLog(@"begin Index Animation");
-}
-
--(void)scrollViewDidScrollToTop:(UIScrollView *)scrollView{
-    NSLog(@"1");
-}
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"111");
 }
 
 @end
