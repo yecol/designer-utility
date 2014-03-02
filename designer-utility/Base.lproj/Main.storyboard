@@ -40,87 +40,146 @@
                                 <rect key="frame" x="0.0" y="768" width="1024" height="700"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" scrollEnabled="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22g-wf-5MT">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="700"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-m7-tgs">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="700"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ezM-Ia-MnR">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="696"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9X-BH-Svk">
+                                        <rect key="frame" x="256" y="0.0" width="256" height="700"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v2.png" translatesAutoresizingMaskIntoConstraints="NO" id="cNO-3B-dHb">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="697"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8m-vo-Ck5">
+                                        <rect key="frame" x="512" y="0.0" width="256" height="700"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wd7-6f-cx0">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="700"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v3.png" translatesAutoresizingMaskIntoConstraints="NO" id="8N0-XL-D1n">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="971"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v1.png" translatesAutoresizingMaskIntoConstraints="NO" id="yyE-UZ-JBK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="700"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </scrollView>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5s-pX-gnP">
-                                                <rect key="frame" x="320" y="0.0" width="267" height="700"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v2.png" translatesAutoresizingMaskIntoConstraints="NO" id="NID-no-1Gd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="267" height="700"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </scrollView>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8m-vo-Ck5">
-                                                <rect key="frame" x="592" y="0.0" width="267" height="700"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v3.png" translatesAutoresizingMaskIntoConstraints="NO" id="8N0-XL-D1n">
-                                                        <rect key="frame" x="0.0" y="0.0" width="267" height="1026"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </scrollView>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaN-X2-FjE">
-                                                <rect key="frame" x="864" y="0.0" width="267" height="700"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v4.png" translatesAutoresizingMaskIntoConstraints="NO" id="8aI-Nd-VWX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="267" height="912"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </scrollView>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.92941176470588238" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="jYN-3J-wmo"/>
-                                        </connections>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaN-X2-FjE">
+                                        <rect key="frame" x="768" y="0.0" width="256" height="869"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v4.png" translatesAutoresizingMaskIntoConstraints="NO" id="8aI-Nd-VWX">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="1081"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                        </subviews>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6K-tQ-R44">
+                                <rect key="frame" x="332" y="-25" width="360" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="word_portfolio_w.png" translatesAutoresizingMaskIntoConstraints="NO" id="cjd-fh-Eiv">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="word_bisous_s.png" translatesAutoresizingMaskIntoConstraints="NO" id="jTQ-VY-XmF">
+                                        <rect key="frame" x="283" y="0.0" width="74" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeZ-1E-7cY">
+                                <rect key="frame" x="674" y="359" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MbU-BS-zwL" kind="modal" id="cGN-Yq-C70"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18431372549019609" green="0.62352941176470589" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="hPflView" destination="22g-wf-5MT" id="d6x-VQ-AKm"/>
+                        <outlet property="porfolioTitleView" destination="y6K-tQ-R44" id="A0L-8k-yTa"/>
                         <outlet property="portfolioBtn" destination="4QH-47-Hf7" id="Q8e-bu-XYT"/>
                         <outlet property="portfolioIndexView" destination="cbh-Dj-59a" id="Zd7-vP-fYw"/>
-                        <outlet property="v1PflView" destination="wd7-6f-cx0" id="9cK-6V-R3Q"/>
-                        <outlet property="v2PflView" destination="S5s-pX-gnP" id="Tvc-8a-wzM"/>
+                        <outlet property="v1PflView" destination="kJI-m7-tgs" id="Pru-8n-2WS"/>
+                        <outlet property="v2PflView" destination="b9X-BH-Svk" id="quY-hW-C76"/>
                         <outlet property="v3PflView" destination="D8m-vo-Ck5" id="fq9-LL-AXS"/>
                         <outlet property="v4PflView" destination="xaN-X2-FjE" id="L0o-0T-Xds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <containerView contentMode="scaleToFill" id="1wW-1Z-nF2">
+                    <rect key="frame" x="0.0" y="0.0" width="551" height="657"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <segue destination="MbU-BS-zwL" kind="embed" id="bMa-MS-byA"/>
+                    </connections>
+                </containerView>
             </objects>
-            <point key="canvasLocation" x="-762" y="-195"/>
+            <point key="canvasLocation" x="-755" y="-233"/>
+        </scene>
+        <!--Circle View Controller-->
+        <scene sceneID="4da-jw-msR">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="MbU-BS-zwL" customClass="YSCircleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uqG-MF-Jd0"/>
+                        <viewControllerLayoutGuide type="bottom" id="x2B-wl-xfa"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dsJ-dc-6O9">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPX-rB-XNa">
+                                <rect key="frame" x="469" y="78" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginAnimation:" destination="MbU-BS-zwL" eventType="touchUpInside" id="2g3-8C-sJb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1843137255" green="0.62352941179999999" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiF-9d-uy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-755" y="744"/>
         </scene>
     </scenes>
     <resources>
         <image name="avatar.png" width="452" height="450"/>
         <image name="avatar_up.png" width="452" height="450"/>
-        <image name="v1.png" width="630" height="1368"/>
-        <image name="v2.png" width="534" height="1388"/>
-        <image name="v3.png" width="534" height="2052"/>
-        <image name="v4.png" width="534" height="1824"/>
+        <image name="v1.png" width="512" height="1391"/>
+        <image name="v2.png" width="512" height="1393"/>
+        <image name="v3.png" width="512" height="1941"/>
+        <image name="v4.png" width="512" height="1737"/>
         <image name="word_bisous.png" width="218" height="54"/>
+        <image name="word_bisous_s.png" width="148" height="38"/>
+        <image name="word_portfolio_w.png" width="188" height="40"/>
         <image name="word_vsdesigner.png" width="362" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -128,4 +187,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="cGN-Yq-C70"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,6 @@
 
 @interface YSPortfolioIndexViewController : UIViewController
 
-@property(assign,nonatomic)id delegate;
+@property(assign, nonatomic) id delegate;
 
 @end
