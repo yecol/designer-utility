@@ -29,6 +29,8 @@ const int verticalPortfolio = 4;
   isPortfolioOpen = FALSE;
 
   [self.view bringSubviewToFront:self.portfolioBtn];
+
+  [self prepareViews];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,8 +82,6 @@ const int verticalPortfolio = 4;
 
           [self.v3PflView setContentSize:CGSizeMake(256, 971)];
           [self.v4PflView setContentSize:CGSizeMake(256, 1081)];
-
-          [self prepareViews];
         }];
 
   } else {
@@ -114,19 +114,18 @@ const int verticalPortfolio = 4;
 - (void)prepareViews {
 
   // rapoo
-
   int rapooCount = 8;
   UIScrollView *scroll1 =
-      [[UIScrollView alloc] initWithFrame:CGRectMake(14, 15, 228, 185)];
+      [[UIScrollView alloc] initWithFrame:CGRectMake(14, 15, 229, 187)];
   scroll1.directionalLockEnabled = YES;
   scroll1.pagingEnabled = YES;
   scroll1.backgroundColor = [UIColor clearColor];
   scroll1.showsVerticalScrollIndicator = NO;
   scroll1.showsHorizontalScrollIndicator = NO;
-  scroll1.delegate = self;
+  scroll1.bounces = NO;
 
-  CGSize newSize =
-      CGSizeMake(scroll1.frame.size.width * (8 + 1), scroll1.frame.size.height);
+  CGSize newSize = CGSizeMake(scroll1.frame.size.width * rapooCount,
+                              scroll1.frame.size.height);
   [scroll1 setContentSize:newSize];
 
   // Init image views
@@ -142,6 +141,36 @@ const int verticalPortfolio = 4;
   }
 
   [self.v1PflView addSubview:scroll1];
+
+  // qingting
+  int qCount = 3;
+  UIScrollView *scroll2 =
+      [[UIScrollView alloc] initWithFrame:CGRectMake(14, 215, 228, 92)];
+  scroll2.directionalLockEnabled = YES;
+  scroll2.pagingEnabled = YES;
+  scroll2.backgroundColor = [UIColor clearColor];
+  scroll2.showsVerticalScrollIndicator = NO;
+  scroll2.showsHorizontalScrollIndicator = NO;
+  scroll2.bounces = NO;
+
+  CGSize newSize2 =
+      CGSizeMake(scroll2.frame.size.width * qCount, scroll2.frame.size.height);
+  [scroll2 setContentSize:newSize2];
+
+  // Init image views
+  for (int i = 0; i < qCount; i++) {
+    UIImageView *singleGuideView = [[UIImageView alloc]
+        initWithFrame:CGRectMake(scroll2.frame.size.width * i, 0.0,
+                                 scroll2.frame.size.width,
+                                 scroll2.frame.size.height)];
+    UIImage *image =
+        [UIImage imageNamed:[NSString stringWithFormat:@"q_%d", i + 1]];
+    [singleGuideView setImage:image];
+    [scroll2 addSubview:singleGuideView];
+  }
+
+  [self.v1PflView addSubview:scroll1];
+  [self.v1PflView addSubview:scroll2];
 }
 
 - (IBAction)circleBtnPressed:(id)sender {

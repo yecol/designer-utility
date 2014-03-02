@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YSCircleViewController.h"
 
 @interface YSViewController : UIViewController<UIScrollViewDelegate>
+
+@property(assign, nonatomic) YSCircleViewController *circleController;
 
 @property(assign, nonatomic) IBOutlet UIButton *portfolioBtn;
 @property(assign, nonatomic) IBOutlet UIView *portfolioIndexView;
