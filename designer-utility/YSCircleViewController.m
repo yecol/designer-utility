@@ -174,7 +174,7 @@ const float animationDuration = 1;
     }];
   } else if (step == 4) {
     [self.scene6center setAlpha:1];
-    [UIView animateWithDuration:animationDuration
+    [UIView animateWithDuration:5
                           delay:0.1
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{

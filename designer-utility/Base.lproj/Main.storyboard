@@ -199,7 +199,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5C-aH-9X0">
-                                <rect key="frame" x="0.0" y="768" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="2768" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scene1.png" translatesAutoresizingMaskIntoConstraints="NO" id="xaC-WM-61T">
@@ -338,7 +338,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="w5-621-349.png" translatesAutoresizingMaskIntoConstraints="NO" id="evS-Jv-vZX">
-                                        <rect key="frame" x="892" y="-320" width="94" height="94"/>
+                                        <rect key="frame" x="1292" y="-320" width="94" height="94"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="w6-623-367.png" translatesAutoresizingMaskIntoConstraints="NO" id="wwS-5c-w2E">
