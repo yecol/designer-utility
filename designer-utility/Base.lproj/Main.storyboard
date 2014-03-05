@@ -4,6 +4,65 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--Color Taker View Controller-->
+        <scene sceneID="JgX-Xc-uHg">
+            <objects>
+                <viewController id="tkg-0U-3AB" customClass="YSColorTakerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cRH-Pg-RPC"/>
+                        <viewControllerLayoutGuide type="bottom" id="t4z-sV-wOU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yXT-C9-OsA">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="c_main.png" translatesAutoresizingMaskIntoConstraints="NO" id="FeS-zL-u2Y">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FZ-ko-qh0">
+                                <rect key="frame" x="800" y="659" width="180" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="3Y5-Dv-Z9G"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4d-pf-nHp">
+                                <rect key="frame" x="90" y="40" width="913" height="615"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color-h.png" translatesAutoresizingMaskIntoConstraints="NO" id="X47-6m-VgI">
+                                        <rect key="frame" x="0.0" y="200" width="915" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color-v.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sc7-bv-Kec">
+                                        <rect key="frame" x="100" y="0.0" width="20" height="615"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color-c.png" translatesAutoresizingMaskIntoConstraints="NO" id="ulc-Rp-Ey1">
+                                        <rect key="frame" x="101" y="201" width="16" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="c" destination="ulc-Rp-Ey1" id="6Ae-ld-1JE"/>
+                        <outlet property="h" destination="X47-6m-VgI" id="eaG-oI-lVj"/>
+                        <outlet property="v" destination="Sc7-bv-Kec" id="mNp-Yj-Kb0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSN-Jn-Elt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-801" y="-1423"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -16,6 +75,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="9fF-Tt-FJ8">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="word_vsdesigner.png" translatesAutoresizingMaskIntoConstraints="NO" id="Out-uh-H3F">
                                 <rect key="frame" x="422" y="550" width="181" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -106,7 +169,28 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MbU-BS-zwL" kind="modal" customClass="YSCustomr2lSegue" animates="NO" id="cGN-Yq-C70"/>
+                                    <segue destination="tkg-0U-3AB" kind="modal" id="zoG-cK-JdK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0p-Um-w8r">
+                                <rect key="frame" x="32" y="353" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="left-btn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uv6-Po-8t6" kind="modal" id="Jxw-8t-1p3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAG-Yc-hUE">
+                                <rect key="frame" x="931" y="688" width="50" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Other">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MbU-BS-zwL" kind="modal" id="dci-qf-xJz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,7 +215,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </containerView>
             </objects>
-            <point key="canvasLocation" x="-755" y="-233"/>
+            <point key="canvasLocation" x="-775" y="-237"/>
         </scene>
         <!--Circle View Controller-->
         <scene sceneID="4da-jw-msR">
@@ -153,24 +237,24 @@
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPX-rB-XNa">
+                                        <rect key="frame" x="20" y="369" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="BACK">
+                                            <color key="titleColor" red="0.1023323449" green="0.54091583030000001" blue="0.21321852190000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.1023323449" green="0.54091583030000001" blue="0.21321852190000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="modal" customClass="YSCustoml2rSegue" animates="NO" id="MFh-S8-dXy"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPX-rB-XNa">
-                                <rect key="frame" x="28" y="308" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="beginAnimation:" destination="MbU-BS-zwL" eventType="touchUpInside" id="2g3-8C-sJb"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" customClass="YSCustoml2rSegue" animates="NO" id="MFh-S8-dXy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9A-Yr-wht">
                                 <rect key="frame" x="424" y="308" width="187" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -422,6 +506,67 @@
             </objects>
             <point key="canvasLocation" x="-815" y="1188"/>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="bSe-Y7-fGr">
+            <objects>
+                <viewController id="uv6-Po-8t6" customClass="YSCameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EkW-4Q-dDQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="E7I-DV-VSH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ysx-tY-Y3U">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="32u-S1-qs9">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cam-green.png" translatesAutoresizingMaskIntoConstraints="NO" id="AT8-pl-rxA">
+                                <rect key="frame" x="19" y="684" width="986" height="490"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cam-green-gap.png" translatesAutoresizingMaskIntoConstraints="NO" id="kLf-y3-aab">
+                                <rect key="frame" x="0.0" y="648" width="1024" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9r-7b-8dY">
+                                <rect key="frame" x="443" y="578" width="138" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cam-btn-1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnPressed:" destination="uv6-Po-8t6" eventType="touchUpInside" id="X94-jk-NSQ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8A-E3-Rx4">
+                                <rect key="frame" x="489" y="738" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.1023323449" green="0.54091583030000001" blue="0.21321852190000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="BEe-jc-GCh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="back" destination="x8A-E3-Rx4" id="tuN-3I-YMx"/>
+                        <outlet property="backGreen" destination="AT8-pl-rxA" id="NyN-h2-ta7"/>
+                        <outlet property="btn" destination="D9r-7b-8dY" id="5Ji-Dq-BQn"/>
+                        <outlet property="frontGreen" destination="kLf-y3-aab" id="cqo-yd-RiF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NY-q0-9sI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="-237"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1-731-375.png" width="54" height="54"/>
@@ -446,7 +591,17 @@
         <image name="9-399-358.png" width="84" height="84"/>
         <image name="avatar.png" width="452" height="450"/>
         <image name="avatar_up.png" width="452" height="450"/>
+        <image name="c_main.png" width="2048" height="1536"/>
+        <image name="cam-btn-1.png" width="276" height="276"/>
+        <image name="cam-green-gap.png" width="2048" height="240"/>
+        <image name="cam-green.png" width="1972" height="979"/>
+        <image name="camera-2.png" width="2048" height="1536"/>
+        <image name="color-c.png" width="32" height="32"/>
+        <image name="color-h.png" width="1830" height="40"/>
+        <image name="color-v.png" width="40" height="1231"/>
         <image name="designerWording.png" width="1752" height="144"/>
+        <image name="left-btn.png" width="140" height="140"/>
+        <image name="main-bg.png" width="2048" height="1536"/>
         <image name="mo.png" width="562" height="680"/>
         <image name="next.png" width="158" height="158"/>
         <image name="pocket.png" width="474" height="420"/>
@@ -482,4 +637,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="BEe-jc-GCh"/>
+    </inferredMetricsTieBreakers>
 </document>

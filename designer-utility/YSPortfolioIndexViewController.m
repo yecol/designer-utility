@@ -33,4 +33,28 @@
   // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
+  UITouch *touch = [touches anyObject];
+  CGPoint ptTouch = [touch locationInView:self.view];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+
+  UITouch *touch = [touches anyObject];
+  CGPoint ptTouch = [touch locationInView:self.view];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+
+  UITouch *touch = [touches anyObject];
+  CGPoint ptTouch = [touch locationInView:self.view];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+
+  UITouch *touch = [touches anyObject];
+  CGPoint ptTouch = [touch locationInView:self.view];
+}
+
 @end
