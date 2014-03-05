@@ -8,7 +8,9 @@
 
 #import "YSCameraViewController.h"
 
-@interface YSCameraViewController ()
+@interface YSCameraViewController () {
+  int count;
+}
 
 @end
 
@@ -25,6 +27,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  count = 0;
   // Do any additional setup after loading the view.
 }
 
@@ -35,32 +38,36 @@
 
 - (IBAction)BtnPressed:(id)sender {
 
-  [self.btn setImage:[UIImage imageNamed:@"cam-btn-2"]
-            forState:UIControlStateNormal];
+  if (count == 0) {
+    [self.btn setImage:[UIImage imageNamed:@"cam-btn-2"]
+              forState:UIControlStateNormal];
+  } else {
 
-  [UIView animateWithDuration:1
-                        delay:0.1
-                      options:UIViewAnimationOptionCurveEaseInOut
-                   animations:^{
-                                CGRect frame = self.frontGreen.frame;
-                                frame.origin.y = 768;
-                                self.frontGreen.frame = frame;
-
-                                float offsetY = 275;
-                                frame = self.backGreen.frame;
-                                frame.origin.y = offsetY;
-                                self.backGreen.frame = frame;
-
-                                frame = self.btn.frame;
-                                frame.origin.y = offsetY - 50;
-                                self.btn.frame = frame;
-                                [self.btn layer].transform = CATransform3DMakeRotation(-M_PI, 0, 0, 1);
-                              }
-                   completion:^(BOOL finished) {
-    [self.btn setImage:[UIImage imageNamed:@"cam-btn-3"]
-              forState:UIControlStateHighlighted];
-    [self.back setHidden:NO];
-  }];
+      [UIView animateWithDuration:1
+                            delay:0.1
+                          options:UIViewAnimationOptionCurveEaseInOut
+                       animations:^{
+                           CGRect frame = self.frontGreen.frame;
+                           frame.origin.y = 768;
+                           self.frontGreen.frame = frame;
+                           
+                           float offsetY = 275;
+                           frame = self.backGreen.frame;
+                           frame.origin.y = offsetY;
+                           self.backGreen.frame = frame;
+                           
+                           frame = self.btn.frame;
+                           frame.origin.y = offsetY - 50;
+                           self.btn.frame = frame;
+                           [self.btn layer].transform = CATransform3DMakeRotation(-M_PI, 0, 0, 1);
+                       }
+                       completion:^(BOOL finished) {
+        [self.btn setImage:[UIImage imageNamed:@"cam-btn-3"]
+                  forState:UIControlStateHighlighted];
+        [self.back setHidden:NO];
+      }];
+  }
+  count++;
 }
 
 @end

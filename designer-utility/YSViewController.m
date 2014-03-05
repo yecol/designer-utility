@@ -68,7 +68,7 @@ const int verticalPortfolio = 4;
              self.portfolioBtn.frame = avatarFrame;
              
              CGRect titleFrame = oTitleFrame;
-             titleFrame.origin.y = 25;
+             titleFrame.origin.y = 40;
              self.porfolioTitleView.frame = titleFrame;
              
              [self.portfolioBtn layer].transform = CATransform3DMakeScale(0.5,0.5,1);
