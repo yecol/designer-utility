@@ -12,8 +12,8 @@ const int verticalPortfolio = 4;
 
 @interface YSViewController () {
 
-  BOOL isPortfolioOpen;
-  CGRect oViewFrame, oBtnFrame, oTitleFrame;
+    BOOL isPortfolioOpen;
+    CGRect oViewFrame, oBtnFrame, oTitleFrame;
 }
 
 - (void)prepareViews;
@@ -22,158 +22,87 @@ const int verticalPortfolio = 4;
 
 @implementation YSViewController
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
 
-  isPortfolioOpen = FALSE;
+    isPortfolioOpen = FALSE;
 
-  [self.view bringSubviewToFront:self.portfolioBtn];
 
-  [self prepareViews];
+    [self prepareViews];
 }
 
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)portfolioBtnPressed:(id)sender {
+- (void)prepareViews
+{
 
-  // portfolio index view animation
+    // rapoo
+    int rapooCount = 8;
+    UIScrollView* scroll1 =
+        [[UIScrollView alloc] initWithFrame:CGRectMake(14, 15, 229, 187)];
+    scroll1.directionalLockEnabled = YES;
+    scroll1.pagingEnabled = YES;
+    scroll1.backgroundColor = [UIColor clearColor];
+    scroll1.showsVerticalScrollIndicator = NO;
+    scroll1.showsHorizontalScrollIndicator = NO;
+    scroll1.bounces = NO;
 
-  float bannerHeight = 68;
+    CGSize newSize = CGSizeMake(scroll1.frame.size.width * rapooCount,
+                                scroll1.frame.size.height);
+    [scroll1 setContentSize:newSize];
 
-  if (!isPortfolioOpen) {
+    // Init image views
+    for (int i = 0; i < rapooCount; i++) {
+        UIImageView* singleGuideView = [[UIImageView alloc]
+            initWithFrame:CGRectMake(scroll1.frame.size.width * i, 0.0,
+                                     scroll1.frame.size.width,
+                                     scroll1.frame.size.height)];
+        UIImage* image =
+            [UIImage imageNamed:[NSString stringWithFormat:@"ra_%d", i + 1]];
+        [singleGuideView setImage:image];
+        [scroll1 addSubview:singleGuideView];
+    }
 
-    [self.portfolioBtn setImage:[UIImage imageNamed:@"avatar_up"]
-                       forState:UIControlStateSelected];
-    [self.portfolioBtn setSelected:YES];
+    [self.v1PflView addSubview:scroll1];
 
-    oViewFrame = self.portfolioIndexView.frame;
-    oBtnFrame = self.portfolioBtn.frame;
-    oTitleFrame = self.porfolioTitleView.frame;
+    // qingting
+    int qCount = 3;
+    UIScrollView* scroll2 =
+        [[UIScrollView alloc] initWithFrame:CGRectMake(14, 215, 228, 92)];
+    scroll2.directionalLockEnabled = YES;
+    scroll2.pagingEnabled = YES;
+    scroll2.backgroundColor = [UIColor clearColor];
+    scroll2.showsVerticalScrollIndicator = NO;
+    scroll2.showsHorizontalScrollIndicator = NO;
+    scroll2.bounces = NO;
 
-        [UIView animateWithDuration:2
-                              delay:0.1
-                            options: UIViewAnimationOptionCurveEaseInOut
-                         animations:^
-         {
-             CGRect viewFrame = oViewFrame;
-             viewFrame.origin.y = bannerHeight;
-             self.portfolioIndexView.frame = viewFrame;
-             
-             CGRect avatarFrame = oBtnFrame;
-             avatarFrame.origin.y = -20;
-             self.portfolioBtn.frame = avatarFrame;
-             
-             CGRect titleFrame = oTitleFrame;
-             titleFrame.origin.y = 40;
-             self.porfolioTitleView.frame = titleFrame;
-             
-             [self.portfolioBtn layer].transform = CATransform3DMakeScale(0.5,0.5,1);
-         }
-                         completion:^(BOOL finished)
-         {
-          [self.portfolioBtn setSelected:NO];
-          [self.portfolioBtn setImage:[UIImage imageNamed:@"avatar_down"]
-                             forState:UIControlStateHighlighted];
-          isPortfolioOpen = TRUE;
+    CGSize newSize2 = CGSizeMake(scroll2.frame.size.width * qCount, scroll2.frame.size.height);
+    [scroll2 setContentSize:newSize2];
 
-          [self.v3PflView setContentSize:CGSizeMake(256, 971)];
-          [self.v4PflView setContentSize:CGSizeMake(256, 1081)];
-        }];
+    // Init image views
+    for (int i = 0; i < qCount; i++) {
+        UIImageView* singleGuideView = [[UIImageView alloc]
+            initWithFrame:CGRectMake(scroll2.frame.size.width * i, 0.0,
+                                     scroll2.frame.size.width,
+                                     scroll2.frame.size.height)];
+        UIImage* image =
+            [UIImage imageNamed:[NSString stringWithFormat:@"q_%d", i + 1]];
+        [singleGuideView setImage:image];
+        [scroll2 addSubview:singleGuideView];
+    }
 
-  } else {
-
-    [self.portfolioBtn setImage:[UIImage imageNamed:@"avatar_down"]
-                       forState:UIControlStateSelected];
-    [self.portfolioBtn setSelected:YES];
-
-        [UIView animateWithDuration:2
-                              delay:0.1
-                            options: UIViewAnimationOptionCurveEaseInOut
-                         animations:^
-         {
-             self.portfolioIndexView.frame = oViewFrame;
-             
-             [self.portfolioBtn layer].transform = CATransform3DMakeScale(1,1,1);
-             self.portfolioBtn.frame = oBtnFrame;
-             self.porfolioTitleView.frame = oTitleFrame;
-         }
-                         completion:^(BOOL finished)
-         {
-          [self.portfolioBtn setSelected:NO];
-          [self.portfolioBtn setImage:[UIImage imageNamed:@"avatar_up"]
-                             forState:UIControlStateHighlighted];
-          isPortfolioOpen = FALSE;
-        }];
-  }
+    [self.v1PflView addSubview:scroll1];
+    [self.v1PflView addSubview:scroll2];
 }
 
-- (void)prepareViews {
-
-  // rapoo
-  int rapooCount = 8;
-  UIScrollView *scroll1 =
-      [[UIScrollView alloc] initWithFrame:CGRectMake(14, 15, 229, 187)];
-  scroll1.directionalLockEnabled = YES;
-  scroll1.pagingEnabled = YES;
-  scroll1.backgroundColor = [UIColor clearColor];
-  scroll1.showsVerticalScrollIndicator = NO;
-  scroll1.showsHorizontalScrollIndicator = NO;
-  scroll1.bounces = NO;
-
-  CGSize newSize = CGSizeMake(scroll1.frame.size.width * rapooCount,
-                              scroll1.frame.size.height);
-  [scroll1 setContentSize:newSize];
-
-  // Init image views
-  for (int i = 0; i < rapooCount; i++) {
-    UIImageView *singleGuideView = [[UIImageView alloc]
-        initWithFrame:CGRectMake(scroll1.frame.size.width * i, 0.0,
-                                 scroll1.frame.size.width,
-                                 scroll1.frame.size.height)];
-    UIImage *image =
-        [UIImage imageNamed:[NSString stringWithFormat:@"ra_%d", i + 1]];
-    [singleGuideView setImage:image];
-    [scroll1 addSubview:singleGuideView];
-  }
-
-  [self.v1PflView addSubview:scroll1];
-
-  // qingting
-  int qCount = 3;
-  UIScrollView *scroll2 =
-      [[UIScrollView alloc] initWithFrame:CGRectMake(14, 215, 228, 92)];
-  scroll2.directionalLockEnabled = YES;
-  scroll2.pagingEnabled = YES;
-  scroll2.backgroundColor = [UIColor clearColor];
-  scroll2.showsVerticalScrollIndicator = NO;
-  scroll2.showsHorizontalScrollIndicator = NO;
-  scroll2.bounces = NO;
-
-  CGSize newSize2 =
-      CGSizeMake(scroll2.frame.size.width * qCount, scroll2.frame.size.height);
-  [scroll2 setContentSize:newSize2];
-
-  // Init image views
-  for (int i = 0; i < qCount; i++) {
-    UIImageView *singleGuideView = [[UIImageView alloc]
-        initWithFrame:CGRectMake(scroll2.frame.size.width * i, 0.0,
-                                 scroll2.frame.size.width,
-                                 scroll2.frame.size.height)];
-    UIImage *image =
-        [UIImage imageNamed:[NSString stringWithFormat:@"q_%d", i + 1]];
-    [singleGuideView setImage:image];
-    [scroll2 addSubview:singleGuideView];
-  }
-
-  [self.v1PflView addSubview:scroll1];
-  [self.v1PflView addSubview:scroll2];
-}
-
-- (IBAction)circleBtnPressed:(id)sender {
+- (IBAction)circleBtnPressed:(id)sender
+{
 }
 
 @end
