@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSColorTakerViewController : UIViewController
+@interface YSColorTakerViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+
+@property(assign,nonatomic)id delegate;
 
 @property(nonatomic, assign) IBOutlet UIView *canvesView;
 @property(nonatomic, assign) IBOutlet UIImageView *v;
 @property(nonatomic, assign) IBOutlet UIImageView *h;
 @property(nonatomic, assign) IBOutlet UIImageView *c;
 
+@property(nonatomic,assign)IBOutlet UIScrollView * scroll;
+
+@property(nonatomic,retain)IBOutlet UIImageView *addedPicture;
+
+-(IBAction)returnBtnPressed;
+-(IBAction)albumBtnPressed;
 @end

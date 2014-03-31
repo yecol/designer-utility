@@ -7,6 +7,7 @@
 //
 
 #import "YSColorTakerViewController.h"
+#import "UIImagePickerController+OrientationFix.h"
 
 @interface YSColorTakerViewController ()
 
@@ -27,7 +28,18 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+[self.scroll setContentSize:CGSizeMake(230, 1941)];
   // Do any additional setup after loading the view.
+}
+
+-(BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,4 +94,34 @@
 
   self.c.center = point;
 }
+
+-(IBAction)returnBtnPressed{
+    [self.delegate dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)albumBtnPressed{
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.allowsEditing = YES;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    [picker dismissModalViewControllerAnimated:YES];
+    UIImage* originalImage = nil;
+    originalImage = [info objectForKey:UIImagePickerControllerEditedImage];
+    if(originalImage==nil)
+    {
+        originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    }
+    
+    [self.addedPicture setImage:originalImage];
+    //At this point you have the selected image in originalImage
+}
+
+
+
 @end

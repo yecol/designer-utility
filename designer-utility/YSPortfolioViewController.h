@@ -11,10 +11,17 @@
 @interface YSPortfolioViewController : UIViewController<UIScrollViewDelegate>
 
 
-@property(retain,nonatomic) IBOutlet UIScrollView *scroll;
+@property(assign,nonatomic) id delegate;
+@property(assign,nonatomic) IBOutlet UIScrollView *scroll;
 
 @property(assign,nonatomic) IBOutlet UIImageView *redmengmo;
 @property(assign,nonatomic) IBOutlet UIImageView *greenmengmo;
 
+@property(assign,nonatomic) IBOutlet UIView *rapooView;
+@property(assign,nonatomic) IBOutlet UIImageView *rapooImage;
 
+@property(assign,nonatomic) IBOutlet UIView *phoenixView;
+@property(assign,nonatomic) IBOutlet UIImageView *phoenixImage;
+
+-(IBAction)returnBtnPressed;
 @end

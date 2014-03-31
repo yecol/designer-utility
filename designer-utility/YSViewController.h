@@ -11,13 +11,18 @@
 
 @interface YSViewController : UIViewController<UIScrollViewDelegate>
 
+@property(nonatomic,retain)IBOutlet UIButton *portfolioBtn;
+@property(nonatomic,retain)IBOutlet UIButton *colorBtn;
+@property(nonatomic,retain)IBOutlet UIButton *notesBtn;
+@property(nonatomic,retain)IBOutlet UIButton *measureBtn;
 
-@property(assign, nonatomic) IBOutlet UIView *portfolioIndexView;
+@property(nonatomic,retain)IBOutlet UIView *pocketMask;
+@property(nonatomic,retain)IBOutlet UIView *lightMask;
+@property(nonatomic,retain)IBOutlet UIButton *lightSwitch;
 
-@property(assign, nonatomic) IBOutlet UIView *v1PflView;
-@property(assign, nonatomic) IBOutlet UIView *v2PflView;
-@property(assign, nonatomic) IBOutlet UIScrollView *v3PflView;
-@property(assign, nonatomic) IBOutlet UIScrollView *v4PflView;
+-(IBAction)lightSwitchPressed;
+-(IBAction)panelBtnPressed:(id)sender;
+
 
 
 

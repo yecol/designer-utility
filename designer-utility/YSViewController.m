@@ -8,16 +8,10 @@
 
 #import "YSViewController.h"
 
-const int verticalPortfolio = 4;
 
 @interface YSViewController () {
 
-    BOOL isPortfolioOpen;
-    CGRect oViewFrame, oBtnFrame, oTitleFrame;
 }
-
-- (void)prepareViews;
-
 @end
 
 @implementation YSViewController
@@ -26,11 +20,7 @@ const int verticalPortfolio = 4;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
-    isPortfolioOpen = FALSE;
-
-
-    [self prepareViews];
+    [self beginAnimation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,70 +29,39 @@ const int verticalPortfolio = 4;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareViews
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-
-    // rapoo
-    int rapooCount = 8;
-    UIScrollView* scroll1 =
-        [[UIScrollView alloc] initWithFrame:CGRectMake(14, 15, 229, 187)];
-    scroll1.directionalLockEnabled = YES;
-    scroll1.pagingEnabled = YES;
-    scroll1.backgroundColor = [UIColor clearColor];
-    scroll1.showsVerticalScrollIndicator = NO;
-    scroll1.showsHorizontalScrollIndicator = NO;
-    scroll1.bounces = NO;
-
-    CGSize newSize = CGSizeMake(scroll1.frame.size.width * rapooCount,
-                                scroll1.frame.size.height);
-    [scroll1 setContentSize:newSize];
-
-    // Init image views
-    for (int i = 0; i < rapooCount; i++) {
-        UIImageView* singleGuideView = [[UIImageView alloc]
-            initWithFrame:CGRectMake(scroll1.frame.size.width * i, 0.0,
-                                     scroll1.frame.size.width,
-                                     scroll1.frame.size.height)];
-        UIImage* image =
-            [UIImage imageNamed:[NSString stringWithFormat:@"ra_%d", i + 1]];
-        [singleGuideView setImage:image];
-        [scroll1 addSubview:singleGuideView];
-    }
-
-    [self.v1PflView addSubview:scroll1];
-
-    // qingting
-    int qCount = 3;
-    UIScrollView* scroll2 =
-        [[UIScrollView alloc] initWithFrame:CGRectMake(14, 215, 228, 92)];
-    scroll2.directionalLockEnabled = YES;
-    scroll2.pagingEnabled = YES;
-    scroll2.backgroundColor = [UIColor clearColor];
-    scroll2.showsVerticalScrollIndicator = NO;
-    scroll2.showsHorizontalScrollIndicator = NO;
-    scroll2.bounces = NO;
-
-    CGSize newSize2 = CGSizeMake(scroll2.frame.size.width * qCount, scroll2.frame.size.height);
-    [scroll2 setContentSize:newSize2];
-
-    // Init image views
-    for (int i = 0; i < qCount; i++) {
-        UIImageView* singleGuideView = [[UIImageView alloc]
-            initWithFrame:CGRectMake(scroll2.frame.size.width * i, 0.0,
-                                     scroll2.frame.size.width,
-                                     scroll2.frame.size.height)];
-        UIImage* image =
-            [UIImage imageNamed:[NSString stringWithFormat:@"q_%d", i + 1]];
-        [singleGuideView setImage:image];
-        [scroll2 addSubview:singleGuideView];
-    }
-
-    [self.v1PflView addSubview:scroll1];
-    [self.v1PflView addSubview:scroll2];
+    [[segue destinationViewController] setDelegate:self];
 }
 
-- (IBAction)circleBtnPressed:(id)sender
-{
+-(IBAction)lightSwitchPressed{
+    [self.lightMask setHidden:![self.lightMask isHidden]];
+}
+
+-(void)beginAnimation{
+    [UIView animateWithDuration:1
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [self.pocketMask setAlpha:0];
+                         [self.portfolioBtn setAlpha:1];
+                         [self.notesBtn setAlpha:1];
+                         [self.measureBtn setAlpha:1];
+                         [self.colorBtn setAlpha:1];
+
+                     }
+                     completion:^(BOOL finished) {
+                         
+                     }];
+    
+    [UIView animateWithDuration:0.5
+                          delay:3
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                        [self.lightMask setAlpha:1];
+                     }
+                     completion:^(BOOL finished) {
+                     }];
 }
 
 @end

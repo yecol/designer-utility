@@ -10,6 +10,10 @@
 
 @interface YSPortfolioViewController ()
 
+-(void)pocketAnimation;
+-(void)rapooAnimation;
+-(void)phoenixAnimation;
+
 @end
 
 @implementation YSPortfolioViewController
@@ -31,8 +35,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     
-    [self.scroll setContentSize:CGSizeMake(1024, 2000)];
-    [self animation1];
+    [self.scroll setContentSize:CGSizeMake(1024, 2858)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,12 +45,18 @@
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if(scrollView.contentOffset.y>100){
-        NSLog(@"aaa depth=%f",scrollView.contentOffset.y);
+    if(scrollView.contentOffset.y>self.greenmengmo.frame.origin.y){
+        [self pocketAnimation];
+    }
+    if(scrollView.contentOffset.y>self.rapooImage.frame.origin.y){
+        [self rapooAnimation];
+    }
+    if(scrollView.contentOffset.y>self.phoenixImage.frame.origin.y){
+        [self phoenixAnimation];
     }
 }
 
--(void)animation1{
+-(void)pocketAnimation{
     
     [UIView animateWithDuration:3
                           delay:0
@@ -63,8 +72,48 @@
                      }
                      completion:^(BOOL finished) {
                      }];
+}
 
+-(void)rapooAnimation{
     
+    [UIView animateWithDuration:7
+                          delay:2
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         CGRect frame = self.rapooImage.frame;
+                         frame.origin.x = 0;
+                         self.rapooImage.frame = frame;
+                         
+                         frame = self.rapooView.frame;
+                         frame.origin.x = 570;
+                         self.rapooView.frame = frame;
+                     }
+                     completion:^(BOOL finished) {
+                     }];
+}
+
+-(void)phoenixAnimation{
+    
+    [UIView animateWithDuration:7
+                          delay:3
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         CGRect frame = self.phoenixImage.frame;
+                         frame.origin.x = -36;
+                         self.phoenixImage.frame = frame;
+                         
+                         frame = self.phoenixView.frame;
+                         frame.origin.x = 61;
+                         self.phoenixView.frame = frame;
+                     }
+                     completion:^(BOOL finished) {
+                     }];
+}
+
+
+
+-(IBAction)returnBtnPressed{
+    [self.delegate dismissViewControllerAnimated:YES completion:nil];
 }
 
 
