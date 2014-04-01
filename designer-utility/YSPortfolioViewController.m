@@ -10,17 +10,18 @@
 
 @interface YSPortfolioViewController ()
 
--(void)pocketAnimation;
--(void)rapooAnimation;
--(void)phoenixAnimation;
+- (void)pocketAnimation;
+- (void)rapooAnimation;
+- (void)phoenixAnimation;
 
 @end
 
 @implementation YSPortfolioViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:nibNameOrNil
+                           bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -33,8 +34,9 @@
     [super viewDidLoad];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    
+- (void)viewDidAppear:(BOOL)animated
+{
+
     [self.scroll setContentSize:CGSizeMake(1024, 2858)];
 }
 
@@ -44,24 +46,26 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if(scrollView.contentOffset.y>self.greenmengmo.frame.origin.y){
+- (void)scrollViewDidScroll:(UIScrollView*)scrollView
+{
+    if (scrollView.contentOffset.y > self.greenmengmo.frame.origin.y) {
         [self pocketAnimation];
     }
-    if(scrollView.contentOffset.y>self.rapooImage.frame.origin.y){
+    if (scrollView.contentOffset.y > self.rapooImage.frame.origin.y) {
         [self rapooAnimation];
     }
-    if(scrollView.contentOffset.y>self.phoenixImage.frame.origin.y){
+    if (scrollView.contentOffset.y > self.phoenixImage.frame.origin.y) {
         [self phoenixAnimation];
     }
 }
 
--(void)pocketAnimation{
-    
+- (void)pocketAnimation
+{
+
     [UIView animateWithDuration:3
-                          delay:0
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
+        delay:0
+        options:UIViewAnimationOptionCurveEaseInOut
+        animations:^{
                          CGRect frame = self.greenmengmo.frame;
                          frame.origin.x = 461;
                          self.greenmengmo.frame = frame;
@@ -69,17 +73,17 @@
                          frame = self.redmengmo.frame;
                          frame.origin.x = 463;
                          self.redmengmo.frame = frame;
-                     }
-                     completion:^(BOOL finished) {
-                     }];
+        }
+        completion:^(BOOL finished) {}];
 }
 
--(void)rapooAnimation{
-    
+- (void)rapooAnimation
+{
+
     [UIView animateWithDuration:7
-                          delay:2
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
+        delay:2
+        options:UIViewAnimationOptionCurveEaseInOut
+        animations:^{
                          CGRect frame = self.rapooImage.frame;
                          frame.origin.x = 0;
                          self.rapooImage.frame = frame;
@@ -87,17 +91,17 @@
                          frame = self.rapooView.frame;
                          frame.origin.x = 570;
                          self.rapooView.frame = frame;
-                     }
-                     completion:^(BOOL finished) {
-                     }];
+        }
+        completion:^(BOOL finished) {}];
 }
 
--(void)phoenixAnimation{
-    
+- (void)phoenixAnimation
+{
+
     [UIView animateWithDuration:7
-                          delay:3
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
+        delay:3
+        options:UIViewAnimationOptionCurveEaseInOut
+        animations:^{
                          CGRect frame = self.phoenixImage.frame;
                          frame.origin.x = -36;
                          self.phoenixImage.frame = frame;
@@ -105,18 +109,14 @@
                          frame = self.phoenixView.frame;
                          frame.origin.x = 61;
                          self.phoenixView.frame = frame;
-                     }
-                     completion:^(BOOL finished) {
-                     }];
+        }
+        completion:^(BOOL finished) {}];
 }
 
-
-
--(IBAction)returnBtnPressed{
-    [self.delegate dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)returnBtnPressed
+{
+    [self.delegate dismissViewControllerAnimated:YES
+                                      completion:nil];
 }
-
-
-
 
 @end
