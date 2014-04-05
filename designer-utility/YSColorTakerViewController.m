@@ -120,7 +120,7 @@
     float square = 137;
     float padding = 15;
 
-    for (int i = 1; i <= 13; i++) {
+    for (int i = 1; i <= 14; i++) {
         UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setFrame:CGRectMake(offsetX, offsetY + (square + padding) * (i - 1),
                                  square, square)];
@@ -152,6 +152,10 @@
     [btn setSelected:YES];
     [self.addedView setHidden:YES];
     [self.pictureView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%ld_03", btn.tag]]];
+    
+    [self.v setHidden:YES];
+    [self.h setHidden:YES];
+    [self.c setHidden:YES];
 }
 
 - (void)getColor:(id)sender
@@ -223,6 +227,22 @@
     didFinishPickingMediaWithInfo:(NSDictionary*)info
 {
     [self.addedView setHidden:NO];
+    
+    [self.c setHidden:NO];
+    [self.v setHidden:NO];
+    [self.h setHidden:NO];
+    
+    for (UIButton * btn in array) {
+        if ([btn tag]!=14) {
+            [btn setSelected:NO];
+        }else{
+          [btn setSelected:YES]; 
+        }
+        
+    }
+    
+    [self.scroll scrollRectToVisible:(CGRectMake(0, 2000, 230, 200)) animated:YES];
+    
 
     [picker dismissViewControllerAnimated:YES
                                completion:nil];

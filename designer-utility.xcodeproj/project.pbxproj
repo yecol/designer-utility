@@ -98,6 +98,7 @@
 		27968C2318EAB2D300A805CC /* f-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 27968C2118EAB2D300A805CC /* f-left.png */; };
 		27968C2418EAB2D300A805CC /* f-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 27968C2218EAB2D300A805CC /* f-right.png */; };
 		27968C2718EAB3D700A805CC /* YSMeasureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27968C2618EAB3D700A805CC /* YSMeasureViewController.m */; };
+		2A304FFA18EFA03500470AB7 /* memo-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A304FF918EFA03500470AB7 /* memo-btn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		27968C2218EAB2D300A805CC /* f-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "f-right.png"; sourceTree = "<group>"; };
 		27968C2518EAB3D700A805CC /* YSMeasureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSMeasureViewController.h; sourceTree = "<group>"; };
 		27968C2618EAB3D700A805CC /* YSMeasureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSMeasureViewController.m; sourceTree = "<group>"; };
+		2A304FF918EFA03500470AB7 /* memo-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "memo-btn.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +327,7 @@
 		27CA055B18C0D5D800E70FE9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2A304FF918EFA03500470AB7 /* memo-btn.png */,
 				27968C2118EAB2D300A805CC /* f-left.png */,
 				27968C2218EAB2D300A805CC /* f-right.png */,
 				27968C1D18EAAF4900A805CC /* notes1.png */,
@@ -499,6 +502,7 @@
 				27968BE418EA8D4700A805CC /* 7-c.png in Resources */,
 				2766B96418E99C8F00E1CFDF /* 11_03.png in Resources */,
 				2766B96218E99C8F00E1CFDF /* 9_03.png in Resources */,
+				2A304FFA18EFA03500470AB7 /* memo-btn.png in Resources */,
 				2765968518E6F5A100396977 /* np1.png in Resources */,
 				27968BDE18EA8D4700A805CC /* 1-c.png in Resources */,
 				27968BFB18EA8D5800A805CC /* 2-o.png in Resources */,
@@ -716,7 +720,7 @@
 				GCC_PREFIX_HEADER = "designer-utility/designer-utility-Prefix.pch";
 				INFOPLIST_FILE = "designer-utility/designer-utility-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5521922D-7A75-40A4-A183-24173A34D7B3";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -732,7 +736,7 @@
 				GCC_PREFIX_HEADER = "designer-utility/designer-utility-Prefix.pch";
 				INFOPLIST_FILE = "designer-utility/designer-utility-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5521922D-7A75-40A4-A183-24173A34D7B3";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
