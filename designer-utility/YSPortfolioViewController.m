@@ -7,6 +7,7 @@
 //
 
 #import "YSPortfolioViewController.h"
+#import "YSDetailViewController.h"
 
 @interface YSPortfolioViewController ()
 
@@ -32,6 +33,14 @@
 {
 
     [super viewDidLoad];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender
+{
+    int temp = (int)[sender tag];
+    YSDetailViewController* detailView = (YSDetailViewController*)[segue destinationViewController];
+    [detailView setPageIndex:(temp % 100)];
+    [detailView setDelegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated

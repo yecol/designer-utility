@@ -34,5 +34,7 @@
 	<array>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
+	<key>statu</key>
+	<string></string>
 </dict>
 </plist>
