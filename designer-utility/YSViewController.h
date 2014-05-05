@@ -15,6 +15,12 @@
 @property (nonatomic, retain) IBOutlet UIButton* notesBtn;
 @property (nonatomic, retain) IBOutlet UIButton* measureBtn;
 
+@property (nonatomic, retain) IBOutlet UIButton* icon2;
+@property (nonatomic, retain) IBOutlet UIButton* icon1;
+@property (nonatomic, retain) IBOutlet UIView* iconView;
+
+@property (nonatomic, retain) IBOutlet UIButton* guideBtn;
+
 @property (nonatomic, retain) IBOutlet UIView* pocketMask;
 @property (nonatomic, retain) IBOutlet UIView* lightMask;
 @property (nonatomic, retain) IBOutlet UILabel* l2;
@@ -22,6 +28,9 @@
 @property (nonatomic, retain) IBOutlet UIButton* lightSwitch;
 
 - (IBAction)lightSwitchPressed;
+- (IBAction)touched;
 - (IBAction)panelBtnPressed:(id)sender;
+- (IBAction)guideBtnPressed:(id)sender;
+- (IBAction)guideBtnReleased:(id)sender;
 
 @end

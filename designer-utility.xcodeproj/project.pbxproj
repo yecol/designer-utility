@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		272BAC8B18C6F03A007F02EA /* YSColorTakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272BAC8A18C6F03A007F02EA /* YSColorTakerViewController.m */; };
+		275D4E0219166CDE00B4D946 /* icon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 275D4E0019166CDE00B4D946 /* icon-1.png */; };
+		275D4E0319166CDE00B4D946 /* icon-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 275D4E0119166CDE00B4D946 /* icon-2.png */; };
+		275D4E051916785B00B4D946 /* guide-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 275D4E041916785B00B4D946 /* guide-bg.png */; };
 		2765968018E6F53200396977 /* YSPortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765967F18E6F53200396977 /* YSPortfolioViewController.m */; };
 		2765968518E6F5A100396977 /* np1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2765968118E6F5A100396977 /* np1.png */; };
 		2765968618E6F5A100396977 /* np2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2765968218E6F5A100396977 /* np2.png */; };
@@ -132,6 +135,9 @@
 /* Begin PBXFileReference section */
 		272BAC8918C6F03A007F02EA /* YSColorTakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSColorTakerViewController.h; sourceTree = "<group>"; };
 		272BAC8A18C6F03A007F02EA /* YSColorTakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSColorTakerViewController.m; sourceTree = "<group>"; };
+		275D4E0019166CDE00B4D946 /* icon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1.png"; sourceTree = "<group>"; };
+		275D4E0119166CDE00B4D946 /* icon-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-2.png"; sourceTree = "<group>"; };
+		275D4E041916785B00B4D946 /* guide-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-bg.png"; sourceTree = "<group>"; };
 		2765967E18E6F53200396977 /* YSPortfolioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSPortfolioViewController.h; sourceTree = "<group>"; };
 		2765967F18E6F53200396977 /* YSPortfolioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSPortfolioViewController.m; sourceTree = "<group>"; };
 		2765968118E6F5A100396977 /* np1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = np1.png; sourceTree = "<group>"; };
@@ -366,7 +372,10 @@
 		27CA055B18C0D5D800E70FE9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				275D4E0019166CDE00B4D946 /* icon-1.png */,
+				275D4E0119166CDE00B4D946 /* icon-2.png */,
 				278B8B4A18EFD04400048AD1 /* 2-1.png */,
+				275D4E041916785B00B4D946 /* guide-bg.png */,
 				278B8B4B18EFD04400048AD1 /* 2-2.png */,
 				278B8B4C18EFD04400048AD1 /* 2-3.png */,
 				278B8B4D18EFD04400048AD1 /* 2-4.png */,
@@ -575,10 +584,12 @@
 				278B8B4618EFCABD00048AD1 /* 1-4.png in Resources */,
 				2766B92B18E9729700E1CFDF /* light-mask.png in Resources */,
 				27968BFE18EA8D5800A805CC /* 5-o.png in Resources */,
+				275D4E051916785B00B4D946 /* guide-bg.png in Resources */,
 				27968C0318EA8D5800A805CC /* 10-o.png in Resources */,
 				2766B95B18E99C8F00E1CFDF /* 2_03.png in Resources */,
 				2786425118C0A9AF0007C586 /* InfoPlist.strings in Resources */,
 				2766B93A18E973D700E1CFDF /* Button-m-l.png in Resources */,
+				275D4E0319166CDE00B4D946 /* icon-2.png in Resources */,
 				2766B93918E973D700E1CFDF /* Button-m-g.png in Resources */,
 				2786425A18C0A9AF0007C586 /* Main.storyboard in Resources */,
 				27968BFD18EA8D5800A805CC /* 4-o.png in Resources */,
@@ -620,6 +631,7 @@
 				278B8B5B18EFD04400048AD1 /* 3-2.png in Resources */,
 				27968C0618EA8D5800A805CC /* 13-o.png in Resources */,
 				278B8B4418EFCABD00048AD1 /* 1-2.png in Resources */,
+				275D4E0219166CDE00B4D946 /* icon-1.png in Resources */,
 				27968C0C18EA970D00A805CC /* h.png in Resources */,
 				27968BFC18EA8D5800A805CC /* 3-o.png in Resources */,
 				27968C0418EA8D5800A805CC /* 11-o.png in Resources */,
